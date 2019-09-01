@@ -4,15 +4,17 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-    <UserSecretsId>4204f533-21c2-406d-b801-5d2e989b24f4</UserSecretsId>
+    <UserSecretsId>7df36750-e16c-43d3-b3a9-aae5ed472b85</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Consul" Version="0.7.2.6" />
+    <PackageReference Include="AspectCore.Core" Version="1.3.0" />
+    <PackageReference Include="AspectCore.Extensions.DependencyInjection" Version="1.3.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="2.2.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.4.10" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+    <PackageReference Include="Polly" Version="5.9.0" />
   </ItemGroup>
 
 </Project>

@@ -17,10 +17,26 @@ namespace WebApplication3
             CreateWebHostBuilder(args).Build().Run(); 
         }
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseUrls("http://*:5000")
-                .UseKestrel()
-                .UseStartup<Startup>();
+        public static IWebHostBuilder CreateWebHostBuilder(string[] args)
+        {
+            var config = new ConfigurationBuilder()
+                .AddCommandLine(args)
+                .Build();
+
+            var ip = config["ip"];
+            var port = config["port"];
+
+            var urls = $"http://*:5000";
+            if (!string.IsNullOrWhiteSpace(ip) &&
+                !string.IsNullOrWhiteSpace(port))
+            {
+                urls = $"http://{ip}:{port}";
+            }
+
+            return WebHost.CreateDefaultBuilder(args)
+               .UseUrls(urls)
+               .UseKestrel()
+               .UseStartup<Startup>();
+        }           
     }
 }

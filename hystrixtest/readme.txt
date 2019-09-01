@@ -1,0 +1,2 @@
+﻿如果直接使用Polly，那么就会造成业务代码中混杂大量的业务无关代码。我们使用AOP（如果不了解AOP，请自行参考网上资料）的方式封装一个简单的框架，模仿Spring cloud中的Hystrix
+需要先引入一个支持.Net Core的AOP，目前我发现的最好的.Net Core下的AOP框架是AspectCore（国产，动态织入），其他要不就是不支持.Net Core，要不就是不支持对异步方法进行拦截。MVC Filter
