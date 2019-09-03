@@ -1,0 +1,22 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/sms/{url}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/duanxin/{url}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "ServiceName": "duanxin2",
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      },
+      "UseServiceDiscovery": true
+    }
+  ],
+  "GlobalConfiguration": {
+    "ServiceDiscoveryProvider": {
+      "Host": "localhost",
+      "Port": 8500,
+      "Type": "Consul"
+    }
+  }
+}

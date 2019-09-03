@@ -34,5 +34,8 @@
         "TimeoutValue": 5000
       }
     }
-  ]
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost"
+  }
 }

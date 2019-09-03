@@ -15,7 +15,7 @@ using Ocelot.Middleware;
 using Ocelot.Provider.Consul;
 using Ocelot.Provider.Polly;
 
-namespace ocelotserver1
+namespace ocelotserver2
 {
     public class Startup
     {
@@ -32,8 +32,9 @@ namespace ocelotserver1
             //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services
                 .AddOcelot(Configuration)
-                .AddPolly();
-            //services.AddOcelot(Configuration).AddConsul();
+                .AddConsul();
+                //.AddConfigStoredInConsul();
+                //.AddPolly();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,7 +52,8 @@ namespace ocelotserver1
 
             //app.UseHttpsRedirection();
             //app.UseMvc();
-            app.UseOcelot().Wait();//不要忘了写Wait
+
+            app.UseOcelot().Wait(); // 不要忘记了写 wait
         }
     }
 }
