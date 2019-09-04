@@ -32,9 +32,8 @@ namespace ocelotserver2
             //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services
                 .AddOcelot(Configuration)
-                .AddConsul();
-                //.AddConfigStoredInConsul();
-                //.AddPolly();
+                .AddConsul()
+                .AddPolly();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,7 +52,19 @@ namespace ocelotserver2
             //app.UseHttpsRedirection();
             //app.UseMvc();
 
-            app.UseOcelot().Wait(); // 不要忘记了写 wait
+            var configuration = new OcelotPipelineConfiguration
+            {
+                PreErrorResponderMiddleware = async (ctx, next) =>
+                {
+                    Console.WriteLine("in OcelotPipelineConfiguration");
+                    //String token = ctx.HttpContext.Request.Headers["token"].FirstOrDefault();//这里可以进行接收的客户端token解析转发
+                    ctx.HttpContext.Request.Headers.Add("X-Hello", "666");
+                    await next.Invoke();
+                    Console.WriteLine("out OcelotPipelineConfiguration");
+                }
+            };
+
+            app.UseOcelot(configuration).Wait(); // 不要忘记了写 wait
         }
     }
 }

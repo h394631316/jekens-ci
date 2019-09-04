@@ -25,6 +25,8 @@ namespace smsservice2.Controllers
             string ip = Configuration["ip"]; //部署到不同服务器的时候不能写成127.0.0.1 或者 0.0.0.0，因为这是让服务消费者调用的地址
             int port = int.Parse(Configuration["port"]);
 
+            string value = Request.Headers["X-Hello"];
+            Console.WriteLine($"x-hello={value}");
             Console.WriteLine($"发送短信 {msg}, power by ip={ip}, port={port} .");
             return true;
         }
