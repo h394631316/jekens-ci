@@ -35,13 +35,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ocelotserver2", "ocelotserv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ocelotserver3", "ocelotserver3\ocelotserver3.csproj", "{B92575BD-9C32-421D-99A0-BB06F1E26F13}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ID4.IdServer", "ID4.IdServer\ID4.IdServer.csproj", "{573F7600-8041-4125-8554-F8B80B7216DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ID4.IdServer", "ID4.IdServer\ID4.IdServer.csproj", "{573F7600-8041-4125-8554-F8B80B7216DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ocelot_id4server", "ocelot_id4server\ocelot_id4server.csproj", "{B507F0FB-6A5E-4074-87CA-CDBC83442117}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ocelot_id4server", "ocelot_id4server\ocelot_id4server.csproj", "{B507F0FB-6A5E-4074-87CA-CDBC83442117}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "calcservice1", "calcservice1\calcservice1.csproj", "{6C240330-2303-46AA-B871-223DBBDAAAF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "calcservice1", "calcservice1\calcservice1.csproj", "{6C240330-2303-46AA-B871-223DBBDAAAF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcClient", "MvcClient\MvcClient.csproj", "{25000524-3BA2-4705-A493-7BE3CDD58B28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcClient", "MvcClient\MvcClient.csproj", "{25000524-3BA2-4705-A493-7BE3CDD58B28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webapiclient1", "webapiclient1\webapiclient1.csproj", "{69E32227-4983-442E-A4F9-CF8FD0A145E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilog1", "Serilog1\Serilog1.csproj", "{8F54647E-35AC-4125-A36E-EA9449250355}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -129,6 +133,14 @@ Global
 		{25000524-3BA2-4705-A493-7BE3CDD58B28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25000524-3BA2-4705-A493-7BE3CDD58B28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25000524-3BA2-4705-A493-7BE3CDD58B28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69E32227-4983-442E-A4F9-CF8FD0A145E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69E32227-4983-442E-A4F9-CF8FD0A145E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69E32227-4983-442E-A4F9-CF8FD0A145E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69E32227-4983-442E-A4F9-CF8FD0A145E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F54647E-35AC-4125-A36E-EA9449250355}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F54647E-35AC-4125-A36E-EA9449250355}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F54647E-35AC-4125-A36E-EA9449250355}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F54647E-35AC-4125-A36E-EA9449250355}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
